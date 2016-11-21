@@ -16,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        /*Volley使用:(在build.grade(Module:app)的dependencies加入compile 'com.android.volley:volley:1.0.0' )
+                    1.建立RequestQueue
+                    2.建立Request--1.2.重工實作?動作3.失敗時做?動作
+                    3.把2加入1
+                    4.啟動1*/
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
         StringRequest request = new StringRequest("http://data.ntpc.gov.tw/od/data/api/BF90FA7E-C358-4CDA-B579-B6C84ADC96A1?$format=json",
                 new Response.Listener<String>() {
