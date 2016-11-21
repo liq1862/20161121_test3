@@ -36,10 +36,9 @@ public class MainActivity extends AppCompatActivity {
                             for (int i=0;i<array.length();i++)
                             {
                                 JSONObject obj = array.getJSONObject(i);
-                                String str = obj.getString("district");
+                                String str = obj.getString("district");     //"district"為key,取得str的value
                                 Log.d("NET", str);
                             }
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
